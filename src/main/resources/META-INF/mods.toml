@@ -2,7 +2,7 @@ modLoader="javafml"
 loaderVersion="[28,)"
 issueTrackerURL="https://hycrafthd.net"
 displayURL="https://hycrafthd.net"
-authors="HyCraftHD"
+authors="HyCraftHD, MrTroble"
 
 [[mods]]
 	modId="tutorialmod"
