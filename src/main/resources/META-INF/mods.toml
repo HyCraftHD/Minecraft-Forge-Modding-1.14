@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+issueTrackerURL="https://hycrafthd.net"
+displayURL="https://hycrafthd.net"
+authors="HyCraftHD"
+
+[[mods]]
+	modId="tutorialmod"
+	version="${file.jarVersion}"
+	displayName="Tutorial Mod"
+	description="Tutorial Mod for 1.14.4"
+	
+	[[dependencies.tutorialmod]]
+	    modId="forge"
+	    mandatory=true
+	    versionRange="[28.0.93,)"
+	    ordering="NONE"
+	    side="BOTH"
+	
+	[[dependencies.tutorialmod]]
+	    modId="minecraft"
+	    mandatory=true
+	    versionRange="[1.14.4]"
+	    ordering="NONE"
+	    side="BOTH"
