@@ -1,4 +1,5 @@
 {
 	"itemGroup.tutorialmod.group": "Tutorial Item Group",
-	"item.tutorialmod.basic_item": "Basic Item"
+	"item.tutorialmod.basic_item": "Basic Item",
+	"block.tutorialmod.basic_block": "Basic Block"
 }
