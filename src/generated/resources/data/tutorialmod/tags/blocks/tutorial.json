@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "tutorialmod:basic_block",
+    "#forge:storage_blocks/diamond"
+  ]
+}
