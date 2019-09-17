@@ -74,7 +74,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'tutorialmod', '--all', '--output', "\"" + file("src/generated/resources").toString() + "\""
 
             mods {
                 examplemod {
@@ -83,6 +83,15 @@ minecraft {
             }
         }
     }
+}
+
+sourceSets {
+	main {
+		java
+		resources {
+			srcDirs += "src/generated/resources"
+		}
+	}
 }
 
 dependencies {
