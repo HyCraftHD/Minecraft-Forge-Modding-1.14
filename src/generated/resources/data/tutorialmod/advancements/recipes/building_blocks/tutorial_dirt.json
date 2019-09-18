@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tutorialmod:tutorial_dirt"
+    ]
+  },
+  "criteria": {
+    "has_tutorial_stuff": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "tutorialmod:tutorial"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tutorialmod:tutorial_dirt"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_tutorial_stuff",
+      "has_the_recipe"
+    ]
+  ]
+}
