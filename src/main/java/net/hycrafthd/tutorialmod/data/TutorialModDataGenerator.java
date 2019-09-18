@@ -3,6 +3,7 @@ package net.hycrafthd.tutorialmod.data;
 import net.hycrafthd.tutorialmod.TutorialMod;
 import net.hycrafthd.tutorialmod.data.provider.TutorialModBlockTagsProvider;
 import net.hycrafthd.tutorialmod.data.provider.TutorialModItemTagsProvider;
+import net.hycrafthd.tutorialmod.data.provider.TutorialModLootTableProvider;
 import net.hycrafthd.tutorialmod.data.provider.TutorialModRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,8 +20,10 @@ public class TutorialModDataGenerator {
 		if (event.includeServer()) {
 			generator.addProvider(new TutorialModBlockTagsProvider(generator));
 			generator.addProvider(new TutorialModItemTagsProvider(generator));
-			
+
 			generator.addProvider(new TutorialModRecipeProvider(generator));
+
+			generator.addProvider(new TutorialModLootTableProvider(generator));
 		}
 	}
 
