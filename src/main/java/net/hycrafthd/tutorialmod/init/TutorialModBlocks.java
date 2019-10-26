@@ -1,7 +1,7 @@
 package net.hycrafthd.tutorialmod.init;
 
 import net.hycrafthd.tutorialmod.TutorialMod;
-import net.hycrafthd.tutorialmod.block.BasicBlock;
+import net.hycrafthd.tutorialmod.block.*;
 import net.hycrafthd.tutorialmod.item.BasicBlockItem;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -16,11 +16,15 @@ public class TutorialModBlocks {
 	
 	public static final BasicBlock BASIC_BLOCK = new BasicBlock();
 	
+	public static final InventoryBlockBlock INVENTORY_BLOCK = new InventoryBlockBlock();
+	
 	@SubscribeEvent
 	public static void register(Register<Block> event) {
 		final IForgeRegistry<Block> registry = event.getRegistry();
 		
 		registry.register(BASIC_BLOCK.setRegistryName(TutorialMod.MODID, "basic_block"));
+		
+		registry.register(INVENTORY_BLOCK.setRegistryName(TutorialMod.MODID, "inventory_block"));
 	}
 	
 	@SubscribeEvent
@@ -28,6 +32,8 @@ public class TutorialModBlocks {
 		final IForgeRegistry<Item> registry = event.getRegistry();
 		
 		registry.register(new BasicBlockItem(BASIC_BLOCK));
+		
+		registry.register(new BasicBlockItem(INVENTORY_BLOCK));
 	}
 	
 }
