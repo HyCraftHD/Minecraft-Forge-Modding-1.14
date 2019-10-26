@@ -1,14 +1,18 @@
 package net.hycrafthd.tutorialmod.tileentity;
 
+import net.hycrafthd.tutorialmod.container.InventoryBlockContainer;
 import net.hycrafthd.tutorialmod.init.TutorialModTileEntityTypes;
+import net.minecraft.entity.player.*;
+import net.minecraft.inventory.container.*;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
+import net.minecraft.util.text.*;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.*;
 
-public class InventoryBlockTileEntity extends TileEntity {
+public class InventoryBlockTileEntity extends TileEntity implements INamedContainerProvider {
 	
 	private final LazyOptional<ItemStackHandler> inventory = LazyOptional.of(() -> new ItemStackHandler(18));
 	
@@ -39,6 +43,16 @@ public class InventoryBlockTileEntity extends TileEntity {
 	
 	public LazyOptional<ItemStackHandler> getInventory() {
 		return inventory;
+	}
+	
+	@Override
+	public Container createMenu(int id, PlayerInventory playerInventory, PlayerEntity player) {
+		return new InventoryBlockContainer(id, playerInventory, this);
+	}
+	
+	@Override
+	public ITextComponent getDisplayName() {
+		return new TranslationTextComponent("container.tutorialmod.inventory_block");
 	}
 	
 }

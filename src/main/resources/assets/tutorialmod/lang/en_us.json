@@ -2,5 +2,6 @@
 	"itemGroup.tutorialmod.group": "Tutorial Item Group",
 	"item.tutorialmod.basic_item": "Basic Item",
 	"block.tutorialmod.basic_block": "Basic Block",
-	"block.tutorialmod.inventory_block": "Inventory Block"
+	"block.tutorialmod.inventory_block": "Inventory Block",
+	"container.tutorialmod.inventory_block": "Inventory Block"
 }
