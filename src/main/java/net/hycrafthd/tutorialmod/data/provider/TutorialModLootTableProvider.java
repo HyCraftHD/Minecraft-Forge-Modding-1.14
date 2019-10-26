@@ -52,6 +52,7 @@ public class TutorialModLootTableProvider implements IDataProvider {
 	
 	protected void registerLootTables(BiConsumer<ResourceLocation, LootTable> consumer) {
 		registerBlock(TutorialModBlocks.BASIC_BLOCK, addFortuneBlockLootTable(TutorialModBlocks.BASIC_BLOCK, Items.DIAMOND), consumer);
+		registerBlock(TutorialModBlocks.INVENTORY_BLOCK, addBasicBlockLootTable(TutorialModBlocks.INVENTORY_BLOCK), consumer);
 	}
 	
 	private static void registerBlock(Block block, LootTable lootTable, BiConsumer<ResourceLocation, LootTable> consumer) {
