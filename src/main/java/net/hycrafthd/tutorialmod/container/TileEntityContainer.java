@@ -17,7 +17,6 @@ public abstract class TileEntityContainer<T extends TileEntity> extends Containe
 	// Client
 	public TileEntityContainer(ContainerType<?> type, int id, PlayerInventory playerInventory, PacketBuffer buffer) {
 		this(type, id, playerInventory, getClientTileEntity(buffer));
-		init();
 	}
 	
 	// Server
